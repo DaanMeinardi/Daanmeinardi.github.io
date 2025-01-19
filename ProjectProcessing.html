@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 1 | D.Meinardi</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #main {
+      background: linear-gradient(to bottom, rgb(81, 81, 106), rgb(40, 67, 80));
+      padding: 0;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .logo {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 1000;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .gif-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .gif-container img{
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+    }
+
+    .description {
+      color: rgb(130, 127, 127);
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      opacity: 90%;
+    }
+
+    .back-to-home {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: none;
+      color: #ffffff;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    .back-to-home:hover {
+      color: rgb(200, 200, 255);
+      transition: 0.3s ease-in-out;
+    }
+
+    .back-to-projects {
+      position: absolute;
+      bottom: 16px;
+      right: 26px;
+      background: none;
+      color: #ffffff;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+      text-decoration: none;
+    }
+
+    .back-to-projects:hover {
+      color: rgb(200, 200, 255);
+      transition: 0.3s ease-in-out;
+    }
+
+    /* Style for text container */
+    .text-container {
+      max-width: 800px; /* Limit text width */
+      margin: 0 auto; /* Center the text block */
+      padding: 20px; /* Add some spacing */
+      color: white;
+      line-height: 1.6; /* Improve readability */
+      text-align: justify; /* Optional: Justify alignment */
+    }
+
+    h1 {
+      text-align: center; /* Center the title */
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="DAAN LOGO.png" alt="Logo">
+    </a>
+  </div>
+
+  <!-- Page Content -->
+  <div id="main">
+    <div class="text-container">
+      <h1>Processing</h1>
+      <p>
+        Processing is a Java-based coding platform to create small games and animations.
+        I started learning this in the first module of the study and am still doing new things with it every week.
+        For one project the goal was to create an animation of a creature. With much freedom, I chose to make a frog.
+        It can jump around and catch flies as you can see in the following GIF.
+      </p>
+      <p>
+    You can move the frog by pressing the "a" and "d" keys and jump with spacebar. To generate the new flies you can click on the screen and it will spawn a new fly.
+      </p>
+    </div>
+    <div class="gif-container">
+      <img src="Frog clip.gif" style="width: 400px; height: auto;" alt="Project 1">
+      <p class="description">
+        Creature I made in module 1 as programming assignment.
+      </p>
+    </div>
+  </div>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="back-to-home">Back to Home</a>
+
+  <!-- Back to Projects Button -->
+  <a href="portfolio.html" class="back-to-projects">Back to Projects</a>
+
+</body>
+</html>

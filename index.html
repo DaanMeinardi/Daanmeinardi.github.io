@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>D.Meinardi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img {
+ 
+  border-radius: 10%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Page content */
+#main {
+  background: linear-gradient(to bottom, rgb(81, 81, 106), rgb(40, 67, 80));
+  padding: 0;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+}
+.logo img {
+  width: 80px; /* Adjust logo size */
+  height: auto;
+  border-radius: 8px; /* Optional: make the logo rounded */
+  
+}
+
+/* Header/Home */
+.header {
+  padding: 32px;
+  text-align: center;
+  color: white;
+  position: relative; /* Required for absolute positioning of the logo */
+}
+.header h1 {
+  font-size: 48px;
+  margin: 0;
+}
+.header p {
+  font-size: 16px;
+}
+.header img {
+  width: 100%;
+  max-width: 992px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+
+/* About section */
+.about {
+  padding: 64px 16px;
+  color: #ffffff;
+  text-align: center;
+}
+.about h2, .about h3 {
+  color: #ffffff;
+}
+.about hr {
+  width: 200px;
+  border: 1px solid #ccc;
+  margin: 16px auto;
+}
+
+/* Pop-up Images Section */
+.pop-up-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 64px 16px;
+  gap: 32px; /* Increase spacing between images */
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Initially transparent */
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+.pop-up-section img {
+  margin-right: 100px;
+  margin-left: 100px;
+  width: auto; /* Ensure consistent size */
+  height: 300px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure images are cropped consistently */
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+.pop-up-section img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Show images when scrolled into view */
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 32px;
+  color: #ccc;
+}
+.footer i {
+  margin: 0 8px;
+  cursor: pointer;
+  color: white;
+}
+.footer i:hover {
+  color: #fff;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.image-container .image-title {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255);
+  padding: 8px 16px;
+  font-size: 20px;
+  pointer-events: none; /* Prevent title from interfering with clicks */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .image-title {
+  opacity: 1; /* Show title on hover */
+}
+
+</style>
+</head>
+<body>
+
+<!-- Logo -->
+<div class="logo">
+  <img src="DAAN LOGO.png" style="width: 200px;height: auto;" alt="Logo">
+</div>
+
+<!-- Page Content -->
+<div id="main">
+  <!-- Header/Home -->
+  <header class="header" id="home">
+    <h1>Daan Meinardi</h1>
+    <p>A website about me and my progress.</p>
+    <img src="IMG_9250.jpg" alt="Header image" style="width: 400px; height: auto;">
+  </header>
+
+  <!-- About Section -->
+  <div class="about" id="about">
+    <h2>About Me</h2>
+    <hr>
+    <p>
+      Daan is a dynamic and passionate sports enthusiast who thrives on the thrill of competition and the joy of staying active. Whether it’s hitting the soccer field, running along scenic trails, or perfecting his jump shot on the basketball court, Daan embraces every opportunity to challenge himself physically. His love for sports isn’t limited to just playing—he’s an avid follower of professional leagues and can often be found discussing game strategies, player stats, and match highlights with friends.
+      <br><br>
+      For Daan, sports are more than just a pastime—they’re a way to connect with others and cultivate discipline. He values the sense of teamwork and resilience that sports bring, and he applies these lessons to other areas of his life.
+    </p>
+  </div>
+
+  <div class="pop-up-section" id="pop-up-section">
+    <!-- Image 1: Leads to Portfolio Page -->
+    <a href="portfolio.html" class="image-container">
+      <img src="DSC08560.JPG" alt="Portfolio">
+      <div class="image-title">Portfolio</div>
+    </a>
+    
+    <!-- Image 2: Leads to Contact Page -->
+    <a href="contact_me.html" class="image-container">
+      <img src="pexels-alex-andrews-271121-821754.jpg" alt="Contact">
+      <div class="image-title">Contact Me</div>
+    </a>
+  </div>
+  
+
+  <!-- Footer -->
+<footer class="footer">
+  <a href="https://www.facebook.com/daan.meinardi.7/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/daanmeinardi/" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/daan-meinardi-a0026a263/" target="_blank"><i class="fa fa-linkedin"></i></a>
+</footer>
+</div>
+
+<script>
+// Reveal the pop-up images when scrolling past the "About Me" section
+window.addEventListener('scroll', function () {
+  const aboutSection = document.getElementById('about');
+  const popUpSection = document.getElementById('pop-up-section');
+  const rect = aboutSection.getBoundingClientRect();
+
+  // Check if the "About Me" section is out of view
+  if (rect.bottom < window.innerHeight) {
+    popUpSection.classList.add('show');
+  }
+});
+</script>
+
+</body>
+</html>
