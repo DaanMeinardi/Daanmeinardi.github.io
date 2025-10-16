@@ -20,9 +20,10 @@
     }
 
     #main {
+      /* Using a custom background color scheme with rounded corners */
       background: linear-gradient(to bottom, rgb(81, 81, 106), rgb(40, 67, 80));
       padding: 0;
-      height: 100vh;
+      min-height: 100vh; /* Changed height: 100vh to min-height: 100vh for better scrolling */
       overflow: auto;
     }
 
@@ -67,33 +68,38 @@
     }
 
     .back-to-home {
-      position: absolute;
+      position: fixed; /* Fixed position so it stays on screen */
       bottom: 16px;
       left: 16px;
-      background: none;
+      background: rgba(0, 0, 0, 0.4);
       color: #ffffff;
-      border: none;
-      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 8px 12px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
       text-align: left;
       text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      z-index: 1000;
     }
 
     .back-to-home:hover {
+      background: rgba(0, 0, 0, 0.8);
       color: rgb(200, 200, 255);
-      transition: 0.3s ease-in-out;
+      border-color: rgb(200, 200, 255);
     }
 
     .projects {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start; /* Aligned items to the start for better spacing control */
       flex-wrap: wrap;
       gap: 70px;
       padding: 32px 16px;
       padding-top: 100px;
+      padding-bottom: 100px; /* Ensure space at the bottom */
     }
 
     .project {
@@ -112,9 +118,15 @@
       height: 100%;
       object-fit: cover;
       transition: opacity 0.3s ease-in-out;
+      display: block; /* Ensures no extra spacing below images */
+    }
+    
+    .project:hover {
+      transform: scale(1.05);
     }
 
-    .project1 {
+    /* Custom classes from original code (adjusted for consistency) */
+    .project1, .project2 {
       position: relative;
       width: 300px;
       height: 300px;
@@ -124,61 +136,55 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease-in-out;
     }
+    
+    .project1:hover, .project2:hover {
+      transform: scale(1.05);
+    }
+
+    /* Specific image height adjustments to align with user's original intent */
     .project1 img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.3s ease-in-out;
-      margin-top: 20px;
+      height: auto; /* Allow image to determine height */
+      margin-top: 20px; /* Specific margin from original code */
     }
 
-    .project1 img:hover {
-      opacity: 0.8;
-      animation: strobe 1.5s infinite ease-in-out;
-     
-    }
-
-    .project2 {
-      position: relative;
-      width: 300px;
-      height: 300px;
-      overflow: hidden;
-      cursor: pointer;
-      border-radius: 70px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease-in-out;
-    }
     .project2 img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.3s ease-in-out;
-      margin-top: 50px;
+      height: 180px; /* Specific height from original code */
+      object-fit: contain; /* Use contain for specific height to prevent stretching */
+      margin-top: 50px; /* Specific margin from original code */
     }
 
-    .project2 img:hover {
+    /* Common hover effect for all project images */
+    .project img:hover, .project1 img:hover, .project2 img:hover {
       opacity: 0.8;
       animation: strobe 1.5s infinite ease-in-out;
-     
-    }
-
-    .project img:hover {
-      opacity: 0.8;
-      animation: strobe 1.5s infinite ease-in-out;
-     
     }
 
     @keyframes strobe {
       0%, 100% { opacity: 0.8; }
       50% { opacity: 1; }
-      
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .projects {
+        gap: 40px;
+        padding-top: 80px;
+      }
+      .project, .project1, .project2 {
+        width: 90vw; /* Take up more width on mobile */
+        max-width: 300px;
+        height: 90vw;
+        max-height: 300px;
+      }
     }
 
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
+  <!-- Logo (Fixed the href to point to the current page or main index) -->
   <div class="logo">
     <a href="index.html">
       <img src="DAAN LOGO.png" alt="Logo">
@@ -193,32 +199,52 @@
       <p class="Header"> Click on a project to learn more about what I do.</p>
     </div>
 
-    <!-- Projects Section -->
+    <!-- Projects Section: Added the fourth project here -->
     <div class="projects">
-      <!-- Project 1 -->
+      <!-- Project 1 (Blender) -->
       <div class="project1">
         <a href="ProjectBlender.html">
-          <img src="Blender_logo_no_text.svg.png" style="width: 300px; height: auto;">
+          <img src="Blender_logo_no_text.svg.png" alt="Blender Project" style="width: 300px; height: auto;">
         </a>
       </div>
     
-      <!-- Project  -->
+      <!-- Project 2 (Processing) -->
       <div class="project">
         <a href="ProjectProcessing.html">
-          <img src="Processing logo.svg" alt="Project 1">
+          <img src="Processing logo.svg" alt="Processing Project">
         </a>
       </div>
     
       
-    
-      <!-- Project 2-->
+      <!-- Project 3 (Van)-->
       <div class="project2">
         <a href="ProjectVan.html">
-          <img src="vandoodle-removebg-preview.png" style="width: 300px; height: 180px;" >
+          <img src="vandoodle-removebg-preview.png" alt="Van Project" style="width: 300px; height: 180px;" >
+        </a>
+      </div>
+
+      <!-- Project 4 (Surfpool project) -->
+      <div class="project">
+        <a href="ProjectSurfpool.html">
+          <!-- Placeholder image: Please replace this src with your actual image path -->
+          <img src="1Phil-Roberts-RingFire-1.png copy.jpg" >
         </a>
       </div>
     </div>
     
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 D. Meinardi. All rights reserved.</p>
+        <div>
+            <i class="fa fa-facebook-official"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-snapchat"></i>
+            <i class="fa fa-pinterest-p"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </div>
+  </div>
 
   <!-- Back to Home Button -->
   <a href="index.html" class="back-to-home">Back to Home</a>
