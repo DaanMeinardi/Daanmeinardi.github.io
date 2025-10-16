@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Detail | D.Meinardi</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #main {
+      /* Background gradient retained from your design */
+      background: linear-gradient(to bottom, rgb(81, 81, 106), rgb(40, 67, 80));
+      padding: 0;
+      min-height: 100vh; /* Use min-height to ensure content can expand */
+      overflow: auto;
+      padding-bottom: 80px; /* Space for fixed buttons */
+    }
+
+    .logo {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 1000;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .IMG1, .IMG3 {
+      text-align: center;
+      margin-top: 40px; /* Increased margin for better spacing */
+      padding: 0 20px;
+    }
+
+    .IMG1 img, .IMG3 img{
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .IMG2 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Allows images to stack on small screens */
+      gap: 20px; /* Reduced gap slightly for mobile */
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .IMG2 img{
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      max-width: 100%; /* Ensures they don't overflow */
+      height: auto;
+    }
+
+    .description1, .description2 {
+      color: rgb(174, 170, 170);
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      opacity: 90%;
+      padding: 0 20px;
+    }
+
+    .back-to-home, .back-to-projects {
+      /* Fixed position for consistency and better mobile use */
+      position: fixed;
+      bottom: 16px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    
+    .back-to-home {
+      left: 16px;
+    }
+
+    .back-to-projects {
+      right: 16px;
+    }
+
+    .back-to-home:hover, .back-to-projects:hover {
+      background: rgba(0, 0, 0, 0.8);
+      color: rgb(200, 200, 255);
+      border-color: rgb(200, 200, 255);
+    }
+
+    /* Style for text container */
+    .text-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: white;
+      line-height: 1.8;
+      text-align: justify;
+      padding-top: 100px; /* Ensure space below the logo */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    
+    /* NEW: Added basic styling for the conclusion heading */
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+        .IMG2 {
+            flex-direction: column;
+            align-items: center;
+        }
+        .text-container {
+            padding: 100px 10px 20px 10px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="DAAN LOGO.png" alt="Logo">
+    </a>
+  </div>
+
+ <div id="main">
+  <div class="text-container">
+    
+    <h1>Amsterdam Surf District</h1>
+    
+    <p>
+      We’re Amsterdam Surf District, a startup with the mission to bring consistent, high-quality waves to the Netherlands by building a world-class wave pool near Amsterdam. 
+      Our goal is to create a place where surfers of all levels can train, have fun, and connect. This Module ive been working on gathering
+      crucial community data to map where surfers are located in the Netherlands. This data will help us understand our potential user base and tailor our services to meet their needs effectively.
+    </p>
+
+    <p>
+      On this page you can find some of the visualisations I created to represent this data and how I did this research.
+      a lot had to do with communicating with the founder of the startup and working together to create the survey and spread it.
+    </p>
+  </div>
+  
+  <div class="IMG1">
+    <img src="Survey.png" style="width: 80%; max-width: 600px;" alt="Primary project image">
+    <p class="description1">
+      A preview of the survey I created to gather data from the surfing community.
+    </p>
+  </div>
+  
+  <div class="IMG2">
+    <img src="questions1.png" style="width: 100%; max-width: 400px;" alt="Before state">
+    <img src="questions2.png" style="width: 100%; max-width: 400px;" alt="After state">
+  </div>
+  <p class="description2">
+   Some of the questions asked in the survey.
+  </p>
+  
+  <div class="IMG3">
+    <img src="Picture 1.png" style="width: 80%; max-width: 600px; "alt="Project diagram or final outcome">
+  </div>
+  <p class="description2">
+    Some of the results of the question "If you surf, what is your level."
+  </p>
+  
+  <div class="text-container" style="padding-top: 40px; padding-bottom: 20px;">
+    <h2>Summary</h2>
+    <p>
+      The challenge was great to learn to work for a client. Also I found in this process the most important thing was spreading the survey within the community.
+      Even with a perfect quick survey, if you don't reach the right people, the data won't be useful. So from this I take that it is even more important to work on networking and profiling.
+      Also for working together in the future it is important to send reminders to get responses on emails, since I once was waiting for over a week and the client just forgot. So I couldnt continue working.
+      All in all a very usefull challenge and good experience.
+    </p>
+  </div>
+  
+</div>
+
+
+
+  <a href="index.html" class="back-to-home">Back to Home</a>
+
+  <a href="portfolio.html" class="back-to-projects">Back to Projects</a>
+
+</body>
+</html>
